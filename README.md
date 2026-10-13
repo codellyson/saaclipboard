@@ -17,10 +17,18 @@ swift run
 ## Release
 
 ```sh
+pnpm release          # 0.1.0 -> 0.1.1; or: minor, major, 1.2.3
+```
+
+Bumps the version, tags it, and pushes. The Release workflow then builds the dmg and publishes a GitHub release.
+
+To build locally instead:
+
+```sh
 ./scripts/package.sh
 ```
 
-Builds a universal `dist/Saaclipboard.app` plus a `.zip` and `.dmg`. Without options it is ad-hoc signed and only runs on the build Mac.
+This builds a universal `dist/Saaclipboard.app` plus a `.zip` and `.dmg`. Without options it is ad-hoc signed and only runs on the build Mac.
 
 To ship to other Macs you need a **Developer ID Application** certificate (Apple Developer Program) and a notarytool profile:
 

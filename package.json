@@ -1,0 +1,7 @@
+{
+  "name": "saaclipboard",
+  "private": true,
+  "scripts": {
+    "release": "./scripts/release.sh"
+  }
+}
